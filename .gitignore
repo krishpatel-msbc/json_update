@@ -1,35 +1,45 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Virtual environment
+*.pyo
+*.pyd
+*.pyc
+*.env
+*.venv
 env/
-.venv/
 venv/
+ENV/
+VENV/
 
-# VS Code settings
+# VSCode
 .vscode/
 
-# Output files
-*.csv
-*.log
-
-# OS-specific files
+# OS junk
 .DS_Store
 Thumbs.db
 
-# Python environment files
-pip-log.txt
-pip-delete-this-directory.txt
+# Output files
+factor_differences.csv
 
-# Jupyter Notebook checkpoints (if applicable)
+# DB credentials (if ever stored)
+*.dsn
+*.ini
+*.cfg
+*.conf
+*.env
+
+# Logs
+*.log
+
+# Jupyter (if used)
 .ipynb_checkpoints/
 
-# Pytest cache
-.pytest_cache/
+# Temporary/backup files
+*.bak
+*.tmp
+*.swp
+*.swo
+~$*
 
-# MyPy cache
-.mypy_cache/
-
-
+# Temp SQL export (optional)
+*.sql

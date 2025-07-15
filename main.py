@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+import pyodbc
 
 # Load original Json file
 with open('data.json', 'r') as f:
@@ -55,3 +56,50 @@ else:
 # Save to CSV
 df_diff.to_csv("factor_differences.csv", index=False)
 print("\nDifferences saved to 'factor_differences.csv'")
+
+
+# Preparing entries for db upload
+df_diff["module_name"] = df_diff["RiskFactorID"]
+df_diff["module_permission"] = True
+df_diff["updated_timestamp"] = pd.Timestamp.now()
+
+df_upload = df_diff[["user_id", "module_name", "module_permission", "updated_timestamp"]]
+
+# Connecting to SQL Server
+conn = pyodbc.connect(
+    "Driver={SQL Server};"
+    "Server=192.168.70.31\\SQL14;"
+    "Database=RiskDashBoard;"
+    "UID=fmdq;"
+    "PWD=fmdq@123;"
+)
+cursor = conn.cursor()
+
+# Create temp table
+cursor.execute("""
+CREATE TABLE #Staging_User_permissions (
+    user_id INT,
+    module_name VARCHAR(255),
+    module_permission BIT,
+    updated_timestamp DATETIME
+)
+""")
+conn.commit()
+
+# Insert data into temp table
+for _, row in df_upload.iterrows():
+    cursor.execute("""
+        INSERT INTO #Staging_User_permissions (user_id, module_name, module_permission, updated_timestamp)
+        VALUES (?, ?, ?, ?)
+    """, row.user_id, row.module_name, row.module_permission, row.updated_timestamp)
+conn.commit()
+
+# Execute stored procedure
+cursor.execute("EXEC JC.MergeUserPermissions")
+conn.commit()
+
+
+cursor.close()
+conn.close()
+
+print("All changes uploaded and merged into JC.Users_permissions.")
