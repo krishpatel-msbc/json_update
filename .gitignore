@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+.venv/
+venv/
+
+# VS Code settings
+.vscode/
+
+# Output files
+*.csv
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python environment files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook checkpoints (if applicable)
+.ipynb_checkpoints/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# Ignore JSON backups or test data if not meant to be tracked
+data.json
+altered_data.json
