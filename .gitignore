@@ -32,6 +32,4 @@ pip-delete-this-directory.txt
 # MyPy cache
 .mypy_cache/
 
-# Ignore JSON backups or test data if not meant to be tracked
-data.json
-altered_data.json
+

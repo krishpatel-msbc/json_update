@@ -1,0 +1,88 @@
+[
+  {
+    "user_id": 1,
+    "factor_mapping": [
+      {
+        "RiskFactorID": "GEMLTL_ARE",
+        "DisplayPosition": 1
+      },
+      {
+        "RiskFactorID": "GEMLTL_BTOP",
+        "DisplayPosition": 2
+      },
+      {
+        "RiskFactorID": "GEMLTL_GROWTH",
+        "DisplayPosition": 3
+      },
+      {
+        "RiskFactorID": "GEMLTL_MOMENTUM",
+        "DisplayPosition": 4
+      },
+      {
+        "RiskFactorID": "5D_ALPHA",
+        "DisplayPosition": 5
+      },
+      {
+        "RiskFactorID": "30D_ALPHA",
+        "DisplayPosition": 6
+      },
+      {
+        "RiskFactorID": "UBS_CROWDING",
+        "DisplayPosition": 7
+      },
+      {
+        "RiskFactorID": "3M_MOM",
+        "DisplayPosition": 8
+      },
+      {
+        "RiskFactorID": "GEMLTL_SIZE",
+        "DisplayPosition": 9
+      },
+      {
+        "RiskFactorID": "GEMLTL_EARNYILD",
+        "DisplayPosition": 10
+      },
+      {
+        "RiskFactorID": "GEMLTL_INVSQLTY",
+        "DisplayPosition": 11
+      },
+      {
+        "RiskFactorID": "GEMLTL_LIQUIDTY",
+        "DisplayPosition": 12
+      },
+      {
+        "RiskFactorID": "GEMLTL_MIDCAP",
+        "DisplayPosition": 13
+      },
+      {
+        "RiskFactorID": "JUNTO_QUALITY",
+        "DisplayPosition": 14
+      },
+      {
+        "RiskFactorID": "STP_CROWDED_SCORE",
+        "DisplayPosition": 15
+      },
+      {
+        "RiskFactorID": "GEMLTL_S4QJPL9W",
+        "DisplayPosition": 16
+      },
+      {
+        "RiskFactorID": "ALPHA_PRV8X1Z",
+        "DisplayPosition": 17
+      },
+      {
+        "RiskFactorID": "MOMENTUM_TY67QP",
+        "DisplayPosition": 18
+      },
+      {
+        "RiskFactorID": "GEMLTL_K9R2M4L8",
+        "DisplayPosition": 19
+      },
+      {
+        "RiskFactorID": "STABILITY_XLJ2G6",
+        "DisplayPosition": 20
+      }
+    ],
+    "updated_by": 17
+  }
+]
